@@ -1,11 +1,46 @@
-h1,
-h2,
-h3,
-h4,
-p,
-li {
+* {
+  /* border-top: 10px solid #1098ad;e */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #444;
   font-family: sans-serif;
-  color: #444444;
+  border-top: 10px solid #1098ad;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+  /* padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px; */
+  padding: 20px 40px;
+  margin-bottom: 60px;
+  height: 80px;
+}
+nav {
+  font-size: 18px;
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+.post-header {
+  margin-bottom: 40px;
+}
+aside {
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  background-color: #f7f7f7;
+  padding: 50px 0;
+  width: 500px;
 }
 
 h1,
@@ -22,10 +57,13 @@ h1 {
 
 h2 {
   font-size: 40px;
+  margin-bottom: 30px;
 }
 
 h3 {
   font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
 }
 h4 {
   font-size: 20px;
@@ -36,11 +74,24 @@ h4 {
 p {
   font-size: 22px;
   line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
 }
 
 li {
   font-size: 20px;
+  margin-bottom: 10px;
 }
+
+li:last-child {
+  margin-bottom: 0;
+}
+
 /* 
 footer p {
   font-size: 16px;
@@ -63,43 +114,77 @@ footer p {
   list-style-type: none;
 }
 
-.main-header {
-  background-color: #f7f7f7;
-}
+/* background-color: #769ea4; */
 
-aside {
-  border: 5px solid #1098ad;
-  background-color: #f7f7f7;
-}
-
-body {
-  /* background-color: #769ea4; */
-}
-
-.first-li {
+/* .first-li {
   font-weight: bold;
-}
+} */
 
 li:first-child {
+  /*This is the same as using classes multiple classes on the first li */
   font-weight: bold;
 }
 
 li:last-child {
-  font-weight: bold;
+  font-style: italic;
 }
+
+/*
+li:nth-child(odd){
+  color:red;
+}
+*/
 
 li:nth-child(2) {
   color: red;
 }
 
-/* Misconception: this won't work! */
-
+/* Misconception: this won't work! the first p is actually within another parent element */
 aritcle p:first-child {
   color: red;
 }
 
-/* Styling link */
+/* Styling link  Puesdo class - LVHA */
 
 a:link {
   color: #1098ad;
+  text-decoration: none;
 }
+
+a:visited {
+  color: #1098ad;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline dotted orangered;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+
+.post-img {
+  width: 100%; /*the width of the parent container in this case its the header*/
+  height: auto;
+}
+
+/* Resolving Conflicts */
+
+/* #copyright {
+  color: red;
+}
+
+.copyright {
+  color: blue;
+}
+
+.text {
+  color: yellow;
+}
+
+footer p {
+  color: green;
+} */
